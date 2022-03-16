@@ -21,8 +21,9 @@ public class Distributor extends AbsEntity {
     @Column(nullable = false)
     String name;
 
+    @Column(columnDefinition = "text")
     String description;
 
-    @Column(columnDefinition = "default 0")
+    @Column(columnDefinition = "double precision default 0")
     Double balance;
 }

@@ -19,5 +19,4 @@ import javax.persistence.Entity;
 public class City extends AbsEntity {
     @Column(nullable = false)
     String name;
-
 }

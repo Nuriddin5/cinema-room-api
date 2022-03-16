@@ -25,9 +25,10 @@ public class Movie extends AbsEntity {
     @Column(nullable = false)
     String title;
 
+    @Column(columnDefinition = "text")
     String description;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     AgeRate ageRate;
 
@@ -37,7 +38,7 @@ public class Movie extends AbsEntity {
     //    @Column(nullable = false)
     Short year;
 
-    //    @Column(nullable = false)
+        @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     Genre genre;
 
