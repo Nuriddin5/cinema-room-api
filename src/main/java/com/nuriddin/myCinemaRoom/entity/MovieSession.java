@@ -1,14 +1,12 @@
 package com.nuriddin.myCinemaRoom.entity;
 
 
-// t.me/superJavaDeveloper 15.03.2022;
-
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -16,14 +14,13 @@ import javax.persistence.OneToOne;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
+public class MovieSession extends AbsEntity {
 
-public class Attachment_content extends AbsEntity {
-    @Column(nullable = false)
-    byte[] data;
+    @ManyToOne
+    Movie movie;
 
-    @OneToOne
-    Attachment attachment;
-
-
+    @ManyToOne
+    Theatre theatre;
 
 }
+

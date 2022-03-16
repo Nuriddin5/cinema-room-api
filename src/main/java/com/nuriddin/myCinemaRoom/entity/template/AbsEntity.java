@@ -1,4 +1,4 @@
-package com.nuriddin.myCinemaRoom.entity;
+package com.nuriddin.myCinemaRoom.entity.template;
 
 
 import lombok.Data;

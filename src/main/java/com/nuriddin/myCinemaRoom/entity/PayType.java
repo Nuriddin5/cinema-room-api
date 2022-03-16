@@ -1,15 +1,12 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-
-// t.me/superJavaDeveloper 15.03.2022;
-
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import javax.persistence.OneToOne;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -17,9 +14,13 @@ import java.time.LocalTime;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
+public class PayType extends AbsEntity {
 
-public class Session_time extends AbsEntity {
-    @Column(nullable = false)
-    LocalTime time;
+    @Column(nullable = false, unique = true)
+    String name;
+
+    @OneToOne
+    Attachment logo;
 
 }
+    

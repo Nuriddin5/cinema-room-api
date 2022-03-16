@@ -7,8 +7,9 @@ import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import java.time.LocalTime;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -17,22 +18,8 @@ import javax.persistence.ManyToOne;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 
-public class ReservedTheatres extends AbsEntity {
-
-    @ManyToOne
-    Theatre theatre;
-
-    @ManyToOne
-    Announcement announcement;
-
-    @ManyToOne
-    SessionDate session_date;
-
-    @ManyToOne
-    SessionTime start_time;
-
-    @ManyToOne
-    SessionTime end_time;
-
+public class SessionTime extends AbsEntity {
+    @Column(nullable = false)
+    LocalTime time;
 
 }

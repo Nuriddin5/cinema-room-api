@@ -1,15 +1,14 @@
 package com.nuriddin.myCinemaRoom.entity;
 
 
-// t.me/superJavaDeveloper 15.03.2022;
-
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import java.time.LocalDate;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -17,18 +16,23 @@ import javax.persistence.OneToOne;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-
-public class Address_Info extends AbsEntity {
-    String town;
-
-    @Column(nullable = false)
-    String street_address;
+public class BillingInfo extends AbsEntity {
 
     @ManyToOne
-    City city;
+    User user;
 
-    @OneToOne
-    Location location;
+    @Column(nullable = false)
+    String cardHolderName;
+
+    @Column(nullable = false, unique = true)
+    String cardNumber;
+
+    @Column(nullable = false)
+    LocalDate expirationDate;
+
+    @Column(nullable = false)
+    Short cvc;
 
 
 }
+    

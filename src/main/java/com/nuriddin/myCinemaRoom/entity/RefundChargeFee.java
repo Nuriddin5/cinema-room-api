@@ -1,14 +1,11 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-
-// t.me/superJavaDeveloper 15.03.2022;
-
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import java.time.LocalDate;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -16,9 +13,14 @@ import java.time.LocalDate;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
+public class RefundChargeFee extends AbsEntity {
 
-public class Session_date extends AbsEntity {
     @Column(nullable = false)
-    LocalDate date;
+    Integer intervalInMin;
+
+    @Column(nullable = false)
+    Double feeInPercentage;
+
 
 }
+    

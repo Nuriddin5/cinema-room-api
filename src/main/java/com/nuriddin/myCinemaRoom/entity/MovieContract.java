@@ -3,6 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import com.nuriddin.myCinemaRoom.enums.MovieContractStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;

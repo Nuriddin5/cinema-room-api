@@ -1,13 +1,11 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-
-// t.me/superJavaDeveloper 15.03.2022;
-
 import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -15,21 +13,14 @@ import javax.persistence.*;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
+public class CashBox extends AbsEntity {
 
-public class Theatre extends AbsEntity {
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     String name;
 
     @Column(nullable = false)
-    String telephone_number;
-
-    @ManyToOne
-    City city;
-
-    @OneToOne
-    AddressInfo address_info;
-
-
+    Double balance;
 
 
 }
+    

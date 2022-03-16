@@ -3,6 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import com.nuriddin.myCinemaRoom.enums.AgeRate;
 import com.nuriddin.myCinemaRoom.enums.Genre;
 import lombok.*;
@@ -25,9 +26,10 @@ public class Movie extends AbsEntity {
     @Column(nullable = false)
     String title;
 
+    @Column(columnDefinition = "text")
     String description;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     AgeRate ageRate;
 
@@ -37,7 +39,7 @@ public class Movie extends AbsEntity {
     //    @Column(nullable = false)
     Short year;
 
-    //    @Column(nullable = false)
+        @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     Genre genre;
 

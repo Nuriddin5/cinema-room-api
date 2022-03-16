@@ -14,13 +14,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Data
 @Entity
-public class Attachment extends AbsEntity {
+public class AttachmentContent extends AbsEntity {
 
-    private String fileOriginalName;
 
-    private Long size;
+   private byte[] content;
 
-    private String contentType;
-
-    private String uniqueName;
+   @OneToOne
+   private Attachment attachment;
 }

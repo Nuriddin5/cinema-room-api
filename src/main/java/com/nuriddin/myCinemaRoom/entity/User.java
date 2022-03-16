@@ -3,13 +3,13 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import java.util.UUID;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -20,7 +20,7 @@ import java.util.UUID;
 
 
 
-public class User extends AbsEntity{
+public class User extends AbsEntity {
     @Column(nullable = false)
     String firstName;
 

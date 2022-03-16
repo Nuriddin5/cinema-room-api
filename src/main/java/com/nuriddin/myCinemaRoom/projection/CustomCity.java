@@ -11,6 +11,5 @@ public interface CustomCity {
 
     String getName();
 
-//    String getA();
 
 }

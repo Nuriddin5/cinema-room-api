@@ -3,12 +3,12 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import com.nuriddin.myCinemaRoom.enums.Type;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -26,6 +26,6 @@ public class Seat extends AbsEntity {
     Type type;
 
     @ManyToOne
-    Raw raw;
+    Row row;
 
 }

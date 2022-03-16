@@ -3,12 +3,13 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import java.time.LocalDate;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -17,11 +18,8 @@ import javax.persistence.ManyToOne;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 
-public class Raw extends AbsEntity {
+public class SessionDate extends AbsEntity {
     @Column(nullable = false)
-    Integer number;
-
-    @ManyToOne
-    Theatre theatre;
+    LocalDate date;
 
 }
