@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "announcement" , collectionResourceRel = "announcementList",excerptProjection = CustomAnnouncement.class)
-public interface AnnouncementRepository extends JpaRepository<Announcement, UUID> {
+public interface AnnouncementRepository extends JpaRepository<Announcement, Long> {
 
 }

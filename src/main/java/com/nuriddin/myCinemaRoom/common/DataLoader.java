@@ -27,8 +27,8 @@ public class DataLoader implements CommandLineRunner {
     TheatreRepository theatreRepository;
 
 
-    @Autowired
-    AttachmentRepository attachmentRepository;
+//    @Autowired
+//    AttachmentRepository attachmentRepository;
 
     @Autowired
     RowRepository rowRepository;

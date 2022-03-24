@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "addressInfo" , collectionResourceRel = "addressInfoList",excerptProjection = CustomAddressInfo.class)
-public interface AdressInfoRepository extends JpaRepository<AddressInfo, UUID> {
+public interface AdressInfoRepository extends JpaRepository<AddressInfo, Long> {
 
 }

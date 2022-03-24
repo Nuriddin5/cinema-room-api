@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "raw" , collectionResourceRel = "rawList",excerptProjection = CustomRow.class)
-public interface RowRepository extends JpaRepository<Row, UUID> {
+public interface RowRepository extends JpaRepository<Row, Long> {
 
 }

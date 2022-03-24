@@ -3,7 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import com.nuriddin.myCinemaRoom.enums.AgeRate;
 import com.nuriddin.myCinemaRoom.enums.Genre;
 import lombok.*;
@@ -19,7 +19,7 @@ import javax.persistence.*;
 @Entity
 
 
-public class Movie extends AbsEntity {
+public class Movie extends AbsLongEntity {
     @Column(nullable = false)
     String name;
 

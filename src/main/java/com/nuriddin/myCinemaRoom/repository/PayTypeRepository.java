@@ -12,6 +12,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "payType" , collectionResourceRel = "payTypeList",excerptProjection = CustomPayType.class)
-public interface PayTypeRepository extends JpaRepository<PayType, UUID> {
+public interface PayTypeRepository extends JpaRepository<PayType, Long> {
 
 }

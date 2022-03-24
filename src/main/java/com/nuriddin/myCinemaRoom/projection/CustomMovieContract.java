@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomMovieContract {
-    UUID getId();
+    Long getId();
 
     Timestamp getCreatedAt();
 
@@ -31,7 +31,7 @@ public interface CustomMovieContract {
     MovieInfo getMovie();
 
     interface MovieInfo {
-        UUID getId();
+        Long getId();
 
         Timestamp getCreatedAt();
 

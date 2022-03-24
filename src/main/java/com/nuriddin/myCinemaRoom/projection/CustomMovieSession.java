@@ -10,15 +10,22 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomMovieSession {
-    UUID getId();
+    Long getId();
 
+    Timestamp getCreatedAt();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     MovieInfo getMovie();
 
     TheatreInfo getTheatre();
 
     interface MovieInfo {
-        UUID getId();
+        Long getId();
 
         Timestamp getCreatedAt();
 
@@ -50,7 +57,7 @@ public interface CustomMovieSession {
     }
 
     interface TheatreInfo {
-        UUID getId();
+        Long getId();
 
         Timestamp getCreatedAt();
 

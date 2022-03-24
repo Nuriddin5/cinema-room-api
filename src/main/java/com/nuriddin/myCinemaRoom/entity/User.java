@@ -3,7 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsUUIDEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -20,7 +20,7 @@ import javax.persistence.ManyToOne;
 
 
 
-public class User extends AbsEntity {
+public class User extends AbsUUIDEntity {
     @Column(nullable = false)
     String firstName;
 

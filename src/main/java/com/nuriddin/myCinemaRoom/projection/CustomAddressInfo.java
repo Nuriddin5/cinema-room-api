@@ -4,8 +4,15 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomAddressInfo {
-    UUID getId();
+    Long getId();
 
+    Timestamp getCreatedAt();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     String getTown();
 
@@ -16,14 +23,29 @@ public interface CustomAddressInfo {
     LocationInfo getLocation();
 
     interface CityInfo {
-        UUID getId();
+        Long getId();
+
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
 
         String getName();
     }
 
     interface LocationInfo {
-        UUID getId();
+        Long getId();
 
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
 
         String getLongtitude();
 

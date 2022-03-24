@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "movie" , collectionResourceRel = "movieList",excerptProjection = CustomMovie.class)
-public interface MovieRepository extends JpaRepository<Movie, UUID> {
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 
 }

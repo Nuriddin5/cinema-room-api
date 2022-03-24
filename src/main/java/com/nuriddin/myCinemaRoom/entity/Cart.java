@@ -1,6 +1,6 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class Cart extends AbsEntity {
+public class Cart extends AbsLongEntity {
 
     @OneToOne
     User user;

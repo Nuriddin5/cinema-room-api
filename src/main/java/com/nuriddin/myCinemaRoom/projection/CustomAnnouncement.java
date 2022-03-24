@@ -7,17 +7,30 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomAnnouncement {
-    UUID getId();
+    Long getId();
 
+    Timestamp getCreatedAt();
 
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     Boolean isIsActive();
 
     MovieContractInfo getMovie_contract();
 
     interface MovieContractInfo {
-        UUID getId();
+        Long getId();
 
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
 
         Movie getMovie();
 

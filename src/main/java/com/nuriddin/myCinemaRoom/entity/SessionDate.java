@@ -3,7 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 
-public class SessionDate extends AbsEntity {
+public class SessionDate extends AbsLongEntity {
     @Column(nullable = false)
     LocalDate date;
 

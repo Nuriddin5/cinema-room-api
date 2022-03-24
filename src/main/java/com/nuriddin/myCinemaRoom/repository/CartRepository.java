@@ -9,6 +9,6 @@ import java.util.UUID;
 
 
 @RepositoryRestResource(path = "cart" , collectionResourceRel = "cartList",excerptProjection = CustomCart.class)
-public interface CartRepository extends JpaRepository<Cart, UUID> {
+public interface CartRepository extends JpaRepository<Cart, Long> {
 
 }

@@ -1,7 +1,7 @@
 package com.nuriddin.myCinemaRoom.entity;
 
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class MovieSession extends AbsEntity {
+public class MovieSession extends AbsLongEntity {
 
     @ManyToOne
     Movie movie;

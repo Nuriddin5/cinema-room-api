@@ -12,6 +12,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "movieSession" , collectionResourceRel = "movieSessionList",excerptProjection = CustomMovieSession.class)
-public interface MovieSessionRepository extends JpaRepository<MovieSession, UUID> {
+public interface MovieSessionRepository extends JpaRepository<MovieSession, Long> {
 
 }

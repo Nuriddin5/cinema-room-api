@@ -1,6 +1,6 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsUUIDEntity;
 import com.nuriddin.myCinemaRoom.enums.TicketStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class Ticket extends AbsEntity {
+public class Ticket extends AbsUUIDEntity {
 
     @ManyToOne
     MovieSession movieSession;

@@ -8,8 +8,14 @@ import java.util.List;
 import java.util.UUID;
 
 public interface CustomCart {
-    UUID getId();
 
+    Long getId();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     UserInfo getUser();
 
@@ -18,6 +24,13 @@ public interface CustomCart {
     interface UserInfo {
         UUID getId();
 
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
 
         String getFirstName();
 
@@ -34,6 +47,14 @@ public interface CustomCart {
 
     interface TicketInfo {
         UUID getId();
+
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
 
         MovieSession getMovieSession();
 

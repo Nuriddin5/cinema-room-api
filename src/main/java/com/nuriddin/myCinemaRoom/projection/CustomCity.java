@@ -1,15 +1,24 @@
 package com.nuriddin.myCinemaRoom.projection;
 
-import com.nuriddin.myCinemaRoom.entity.City;
-import org.springframework.data.rest.core.config.Projection;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
-@Projection(types = City.class)
 public interface CustomCity {
-    UUID getId();
+    Long getId();
+
+//    @JsonIgnore
+    Timestamp getCreatedAt();
+
+//    @JsonIgnore
+    Timestamp getUpdatedAt();
+
+    @JsonIgnore
+    UUID getCreatedBy();
+
+    @JsonIgnore
+    UUID getUpdatedBy();
 
     String getName();
-
-
 }

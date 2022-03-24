@@ -4,15 +4,22 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomPayType {
-    UUID getId();
+    Long getId();
 
+    Timestamp getCreatedAt();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     String getName();
 
     AttachmentInfo getLogo();
 
     interface AttachmentInfo {
-        UUID getId();
+        Long getId();
 
         Timestamp getCreatedAt();
 

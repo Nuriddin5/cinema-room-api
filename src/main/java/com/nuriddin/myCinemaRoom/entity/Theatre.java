@@ -3,7 +3,8 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsUUIDEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -16,7 +17,7 @@ import javax.persistence.*;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 
-public class Theatre extends AbsEntity {
+public class Theatre extends AbsLongEntity {
     @Column(nullable = false)
     String name;
 

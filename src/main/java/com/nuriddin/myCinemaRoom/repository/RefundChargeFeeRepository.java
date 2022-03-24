@@ -12,6 +12,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "refundChargeFee" , collectionResourceRel = "refundChargeFeeList",excerptProjection = CustomRefundChargeFee.class)
-public interface RefundChargeFeeRepository extends JpaRepository<RefundChargeFee, UUID> {
+public interface RefundChargeFeeRepository extends JpaRepository<RefundChargeFee, Long  > {
 
 }

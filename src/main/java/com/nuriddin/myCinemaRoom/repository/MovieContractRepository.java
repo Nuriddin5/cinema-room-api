@@ -12,6 +12,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "movieContract" , collectionResourceRel = "movieContractList",excerptProjection = CustomMovieContract.class)
-public interface MovieContractRepository extends JpaRepository<MovieContract, UUID> {
+public interface MovieContractRepository extends JpaRepository<MovieContract, Long> {
 
 }

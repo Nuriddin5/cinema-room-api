@@ -1,10 +1,12 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -12,7 +14,7 @@ import javax.persistence.*;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class PurchaseHistory extends AbsEntity {
+public class PurchaseHistory extends AbsLongEntity {
 
     @OneToOne
     Ticket ticket;

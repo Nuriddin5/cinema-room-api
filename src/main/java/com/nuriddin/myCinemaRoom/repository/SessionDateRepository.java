@@ -12,6 +12,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "sessionDate" , collectionResourceRel = "sessionDateList",excerptProjection = CustomSessionDate.class)
-public interface SessionDateRepository extends JpaRepository<SessionDate, UUID> {
+public interface SessionDateRepository extends JpaRepository<SessionDate, Long> {
 
 }

@@ -7,15 +7,22 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomRow {
-    UUID getId();
+    Long getId();
 
+    Timestamp getCreatedAt();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     Integer getNumber();
 
     TheatreInfo getTheatre();
 
     interface TheatreInfo {
-        UUID getId();
+        Long getId();
 
         Timestamp getCreatedAt();
 

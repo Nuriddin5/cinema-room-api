@@ -12,6 +12,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "seat" , collectionResourceRel = "seatList",excerptProjection = CustomSeat.class)
-public interface SeatRepository extends JpaRepository<Seat, UUID> {
+public interface SeatRepository extends JpaRepository<Seat, Long> {
 
 }

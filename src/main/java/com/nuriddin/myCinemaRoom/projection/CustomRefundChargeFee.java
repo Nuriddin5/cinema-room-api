@@ -4,7 +4,15 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomRefundChargeFee {
-    UUID getId();
+    Long getId();
+
+    Timestamp getCreatedAt();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     Integer getIntervalInMin();
 

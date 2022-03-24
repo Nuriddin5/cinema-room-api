@@ -85,10 +85,10 @@ public class AttachmentController {
     public void getFile(@PathVariable String id, HttpServletResponse response) throws IOException {
 
 
-        Optional<Attachment> attachmentOptional = attachmentRepo.findById(UUID.fromString(id));
+        Optional<Attachment> attachmentOptional = attachmentRepo.findById(Long.valueOf(id));
         if (attachmentOptional.isPresent()) {
             Attachment attachment = attachmentOptional.get();
-            Optional<AttachmentContent> optionalAttachmentContent = attConRepo.findByAttachmentId(UUID.fromString(id));
+            Optional<AttachmentContent> optionalAttachmentContent = attConRepo.findByAttachmentId(Long.valueOf(id));
             if (optionalAttachmentContent.isPresent()) {
                 AttachmentContent attachmentContent = optionalAttachmentContent.get();
 //                response.setHeader("Content-Disposition", "attachment; filename\"" + attachment.getFileOriginalName() + "\"");

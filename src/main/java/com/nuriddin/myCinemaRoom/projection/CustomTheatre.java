@@ -3,10 +3,19 @@ package com.nuriddin.myCinemaRoom.projection;
 import com.nuriddin.myCinemaRoom.entity.City;
 import com.nuriddin.myCinemaRoom.entity.Location;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomTheatre {
-    UUID getId();
+    Long getId();
+
+    Timestamp getCreatedAt();
+
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     String getName();
 
@@ -14,13 +23,33 @@ public interface CustomTheatre {
 
     CityInfo getCity();
 
-    Address_InfoInfo getAddress_info();
+    AddressInfoInfo getAddress_info();
 
     interface CityInfo {
+        Long getId();
+
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
+
         String getName();
     }
 
-    interface Address_InfoInfo {
+    interface AddressInfoInfo {
+        Long getId();
+
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
+
         String getTown();
 
         String getStreet_address();

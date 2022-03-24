@@ -1,6 +1,6 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class PayType extends AbsEntity {
+public class PayType extends AbsLongEntity {
 
     @Column(nullable = false, unique = true)
     String name;

@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "distributor" , collectionResourceRel = "distributorList",excerptProjection = CustomDistributor.class)
-public interface DistributorRepository extends JpaRepository<Distributor, UUID> {
+public interface DistributorRepository extends JpaRepository<Distributor, Long> {
 
 }

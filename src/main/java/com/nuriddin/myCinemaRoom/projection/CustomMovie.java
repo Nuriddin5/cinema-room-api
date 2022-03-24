@@ -1,15 +1,21 @@
 package com.nuriddin.myCinemaRoom.projection;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nuriddin.myCinemaRoom.enums.AgeRate;
 import com.nuriddin.myCinemaRoom.enums.Genre;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 public interface CustomMovie {
+    Long getId();
 
-    String getId();
+    Timestamp getCreatedAt();
 
+    Timestamp getUpdatedAt();
+
+    UUID getCreatedBy();
+
+    UUID getUpdatedBy();
 
     String getName();
 
@@ -17,13 +23,10 @@ public interface CustomMovie {
 
     String getDescription();
 
-    @JsonIgnore
     AgeRate getAgeRate();
 
-    @JsonIgnore
     Short getDuration();
 
-    @JsonIgnore
     Short getYear();
 
     Genre getGenre();
@@ -35,17 +38,35 @@ public interface CustomMovie {
     CityInfo getSelectedCityId();
 
     interface AttachmentInfo {
-        UUID getId();
+        Long getId();
 
-        String getFileName();
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
+
+        String getFileOriginalName();
+
+        Long getSize();
 
         String getContentType();
 
-        Long getSize();
+        String getUniqueName();
     }
 
     interface CityInfo {
-        UUID getId();
+        Long getId();
+
+        Timestamp getCreatedAt();
+
+        Timestamp getUpdatedAt();
+
+        UUID getCreatedBy();
+
+        UUID getUpdatedBy();
 
         String getName();
     }

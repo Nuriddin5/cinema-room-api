@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.UUID;
 
 @RepositoryRestResource(path = "cashBox" , collectionResourceRel = "cashBoxList",excerptProjection = CustomCashBox.class)
-public interface CashboxRepository extends JpaRepository<CashBox, UUID> {
+public interface CashboxRepository extends JpaRepository<CashBox, Long> {
 
 }

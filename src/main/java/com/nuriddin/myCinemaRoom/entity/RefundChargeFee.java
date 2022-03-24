@@ -1,6 +1,6 @@
 package com.nuriddin.myCinemaRoom.entity;
 
-import com.nuriddin.myCinemaRoom.entity.template.AbsEntity;
+import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -13,7 +13,7 @@ import javax.persistence.Entity;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class RefundChargeFee extends AbsEntity {
+public class RefundChargeFee extends AbsLongEntity {
 
     @Column(nullable = false)
     Integer intervalInMin;
