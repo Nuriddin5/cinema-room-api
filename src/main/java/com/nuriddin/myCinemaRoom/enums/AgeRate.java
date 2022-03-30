@@ -4,5 +4,5 @@ public enum AgeRate {
     G,
     PG,
     R,
-    X
+    NR, X
 }

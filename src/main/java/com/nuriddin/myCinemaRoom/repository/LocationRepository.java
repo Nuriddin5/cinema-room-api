@@ -5,9 +5,8 @@ import com.nuriddin.myCinemaRoom.projection.CustomLocation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import java.util.UUID;
-
-@RepositoryRestResource(path = "location" , collectionResourceRel = "locationList",excerptProjection = CustomLocation.class)
+@RepositoryRestResource(path = "location" , collectionResourceRel = "location",excerptProjection = CustomLocation.class)
 public interface LocationRepository extends JpaRepository<Location, Long> {
+    public Location findByLongtitude(String longtitude);
 
 }

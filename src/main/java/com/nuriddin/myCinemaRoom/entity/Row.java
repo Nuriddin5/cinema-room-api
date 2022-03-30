@@ -6,11 +6,11 @@ package com.nuriddin.myCinemaRoom.entity;
 import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-
+import javax.persistence.*;
+import java.util.List;
+//@Transactional
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +22,32 @@ public class Row extends AbsLongEntity {
     @Column(nullable = false)
     Integer number;
 
-    @ManyToOne
-    Theatre theatre;
 
+    @ManyToOne(optional = false)
+    private Theatre theatre;
+
+
+    @OneToMany(mappedBy = "row",cascade = CascadeType.ALL)
+    List<Seat> seats;
+
+    public Row(Integer number, Theatre theatre) {
+        this.number = number;
+        this.theatre = theatre;
+    }
+
+    public Theatre getTheatres() {
+        return theatre;
+    }
+
+    public void setTheatres(Theatre theatres) {
+        this.theatre = theatres;
+    }
+
+    @Override
+    public String toString() {
+        return "Row{" +
+               "number=" + number +
+               ", theatre=" + theatre +
+               '}';
+    }
 }

@@ -14,7 +14,8 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @Data
 @Entity
-public class Attachment extends AbsLongEntity {
+public class
+Attachment extends AbsLongEntity {
 
     private String fileOriginalName;
 

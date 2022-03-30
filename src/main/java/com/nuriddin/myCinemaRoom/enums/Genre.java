@@ -37,5 +37,5 @@ public enum Genre {
 
     FOOD_FILM,
 
-    ROLLING, ROADSHOW
+    ROLLING, CARTOON, ROADSHOW
 }

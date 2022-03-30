@@ -7,6 +7,8 @@ import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import com.nuriddin.myCinemaRoom.enums.MovieContractStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -20,7 +22,8 @@ import javax.persistence.*;
 
 public class MovieContract extends AbsLongEntity {
 
-    @ManyToOne
+    @ManyToOne()
+//    @OnDelete(action = OnDeleteAction.CASCADE)
     Movie movie;
 
     @Column(nullable = false)

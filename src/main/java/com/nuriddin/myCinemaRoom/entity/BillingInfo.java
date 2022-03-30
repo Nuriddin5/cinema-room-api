@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
@@ -18,7 +19,7 @@ import java.time.LocalDate;
 @Entity
 public class BillingInfo extends AbsLongEntity {
 
-    @ManyToOne
+    @ManyToOne()
     User user;
 
     @Column(nullable = false)

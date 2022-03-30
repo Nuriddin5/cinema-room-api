@@ -20,7 +20,7 @@ public class Cart extends AbsLongEntity {
     @OneToOne
     User user;
 
-    @OneToMany(mappedBy = "cart")
+    @OneToMany()
     List<Ticket> tickets;
 
 

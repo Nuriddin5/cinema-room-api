@@ -7,10 +7,7 @@ import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -23,12 +20,13 @@ public class AddressInfo extends AbsLongEntity {
     String town;
 
     @Column(nullable = false)
-    String street_address;
+    String streetAddress;
 
-    @ManyToOne
-    City city;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    City city;
 
     @OneToOne
+//            (cascade = CascadeType.ALL)
     Location location;
 
 

@@ -15,14 +15,14 @@ import javax.persistence.*;
 @Entity
 public class Ticket extends AbsUUIDEntity {
 
-    @ManyToOne
+    @ManyToOne()
     MovieSession movieSession;
 
     @OneToOne
     Seat seat;
 
-    @OneToOne
-    Attachment qrCode;
+//    @OneToOne
+//    Attachment qrCode;
 
     @Column(nullable = false)
     Double price;
@@ -32,6 +32,6 @@ public class Ticket extends AbsUUIDEntity {
     TicketStatus status;
 
     @ManyToOne
-    Cart cart;
+    User user;
 }
     

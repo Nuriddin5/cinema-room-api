@@ -8,6 +8,8 @@ import com.nuriddin.myCinemaRoom.enums.AgeRate;
 import com.nuriddin.myCinemaRoom.enums.Genre;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -39,17 +41,17 @@ public class Movie extends AbsLongEntity {
     //    @Column(nullable = false)
     Short year;
 
-        @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     Genre genre;
 
     @OneToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     Attachment posterImg;
 
     String trailerLink;
 
-    @ManyToOne
-    City selectedCityId;
+//    @ManyToOne
+//    City selectedCityId;
 
 
 }
