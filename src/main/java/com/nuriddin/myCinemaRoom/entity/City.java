@@ -18,6 +18,6 @@ import javax.persistence.Entity;
 @Entity
 
 public class City extends AbsLongEntity {
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     String name;
 }

@@ -13,7 +13,9 @@ import org.springframework.data.rest.core.annotation.RestResource;
 public interface CityRepository extends JpaRepository<City, Long> {
 
     @RestResource(path = "nameStartWith")
-    public Page<City> findByNameStartingWith(@Param("name") String name, Pageable pageable);
+    Page<City> findByNameStartingWith(@Param("name") String name, Pageable pageable);
 
-    public City findByName(String name);
+    City findByName(String name);
+
+    Boolean existsByName(String name);
 }

@@ -16,6 +16,7 @@ import java.util.UUID;
 //@Entity
 
 public class TicketDto {
+    UUID ticketId;
     Long sessionId;
     Long seatId;
 //    Long userId;

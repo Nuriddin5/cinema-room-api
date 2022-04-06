@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 
@@ -22,4 +24,20 @@ public class TicketController {
         return ticketService.generateTicket(ticketDto);
 
     }
+
+//    @RequestMapping(value = "/api/ticket/refund",method = RequestMethod.POST)
+//    public HttpEntity<?> refundTickets(@RequestBody List<TicketDto> ticketDto) {
+//
+//        return ticketService.refundTickets(ticketDto);
+//
+//    }
+
+    @RequestMapping(value = "/api/ticket/get-tickets-in-cart/{userId}",method = RequestMethod.GET)
+    public HttpEntity<?> getTicketsInCart(@PathVariable String userId) {
+
+        return ticketService.getTicketsInCart(userId);
+
+    }
+
+
 }
