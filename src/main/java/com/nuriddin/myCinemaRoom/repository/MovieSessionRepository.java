@@ -16,7 +16,7 @@ public interface MovieSessionRepository extends JpaRepository<MovieSession, Long
     value = "select m.name from ticket t " +
             "join movie_session ms on ms.id = t.movie_session_id" +
             " join announcement a on ms.announcement_id = a.id " +
-            "join movie_contract mc on a.movie_contract_id = mc.id " +
+            "join  movieContract mc on a. movieContract_id = mc.id " +
             "join movie m on mc.movie_id = m.id where t.id  = :ticketId")
     public String findMovieNameByTicketId(UUID ticketId);
 

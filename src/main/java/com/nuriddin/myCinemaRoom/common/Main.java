@@ -3,18 +3,7 @@ package com.nuriddin.myCinemaRoom.common;
 
 // t.me/superJavaDeveloper 30.03.2022;
 
-//import lombok.*;
-//import lombok.experimental.FieldDefaults;
-//
-//import javax.persistence.Entity;
-//import java.util.UUID;
-//
-//@EqualsAndHashCode(callSuper = true)
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Data
-//@FieldDefaults(level = AccessLevel.PRIVATE)
-//@Entity
+ 
 
 public class Main {
     public static void main(String[] args) {

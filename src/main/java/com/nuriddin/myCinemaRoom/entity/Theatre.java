@@ -3,6 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import com.nuriddin.myCinemaRoom.entity.template.AbsUUIDEntity;
 import lombok.*;
@@ -33,6 +34,7 @@ public class Theatre extends AbsLongEntity {
     @OneToOne
     AddressInfo address_info;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "theatre",cascade = CascadeType.ALL)
     List<Row> rows;
 

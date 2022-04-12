@@ -3,6 +3,7 @@ package com.nuriddin.myCinemaRoom.entity;
 
 // t.me/superJavaDeveloper 15.03.2022;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -23,10 +24,10 @@ public class Row extends AbsLongEntity {
     Integer number;
 
 
-    @ManyToOne(optional = false)
+    @ManyToOne()
     private Theatre theatre;
 
-
+    @JsonIgnore
     @OneToMany(mappedBy = "row",cascade = CascadeType.ALL)
     List<Seat> seats;
 

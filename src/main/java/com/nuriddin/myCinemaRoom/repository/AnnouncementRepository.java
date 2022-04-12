@@ -16,11 +16,11 @@ public interface AnnouncementRepository extends JpaRepository<Announcement, Long
     @Query(value = "select a.id as announcementId,\n" +
                    "       m.title as title,\n" +
                    "       m.poster_img_id as posterImgId,\n" +
-                   "mc.movie_contract_status as status\n" +
+                   "mc. movieContract_status as status\n" +
                    "       from announcement a\n" +
-                   "join movie_contract mc on mc.id = a.movie_contract_id\n" +
+                   "join  movieContract mc on mc.id = a. movieContract_id\n" +
                    "join movie m on mc.movie_id = m.id\n" +
-                   "where mc.movie_contract_status <> 'DISABLED'",
+                   "where mc. movieContract_status <> 'DISABLED'",
             nativeQuery = true)
     public List<ViewAnnouncements> getAllAnnouncements();
 
@@ -35,12 +35,12 @@ public interface AnnouncementRepository extends JpaRepository<Announcement, Long
                    "       m.year,\n" +
                    "       m.trailer_link as trailerLink,\n" +
                    "       a.created_at as createdAt,\n" +
-                   "       mc.movie_contract_status as status\n" +
+                   "       mc. movieContract_status as status\n" +
                    "\n" +
                    "from announcement a\n" +
-                   "         join movie_contract mc on mc.id = a.movie_contract_id\n" +
+                   "         join  movieContract mc on mc.id = a. movieContract_id\n" +
                    "         join movie m on mc.movie_id = m.id\n" +
-                   "where mc.movie_contract_status = 'ACTIVE' and a.id =:Id",
+                   "where mc. movieContract_status = 'ACTIVE' and a.id =:Id",
             nativeQuery = true)
     Optional<AnnouncementView> getAnnouncement(Long Id);
 }

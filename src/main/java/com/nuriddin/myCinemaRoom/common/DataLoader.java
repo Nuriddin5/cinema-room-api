@@ -231,26 +231,26 @@ public class DataLoader implements CommandLineRunner {
 
             ArrayList<MovieSession> movieSessions = new ArrayList<>(Arrays.asList(
                     new MovieSession(
-                            theatreRepository.findByName("Theatre 1"),
-                            announcementRepository.findById(1L).get(),
+                                                theatreRepository.findByName("Theatre 1"),
                             sessionDateRepository.findByDate(LocalDate.parse("2022-05-01")),
                             sessionTimeRepository.findByTime(LocalTime.of(10,0)),
-                            sessionTimeRepository.findByTime(LocalTime.of(12,0))
-                    ),
+                            sessionTimeRepository.findByTime(LocalTime.of(12,0)),
+                            announcementRepository.findById(1L).get()
+                                        ),
                     new MovieSession(
-                            theatreRepository.findByName("Theatre 1"),
-                            announcementRepository.findById(2L).get(),
+                                                theatreRepository.findByName("Theatre 1"),
                             sessionDateRepository.findByDate(LocalDate.parse("2022-05-01")),
                             sessionTimeRepository.findByTime(LocalTime.of(12,0)),
-                            sessionTimeRepository.findByTime(LocalTime.of(14,0))
-                    ),
+                            sessionTimeRepository.findByTime(LocalTime.of(14,0)),
+                            announcementRepository.findById(2L).get()
+                                        ),
                     new MovieSession(
-                            theatreRepository.findByName("Theatre 2"),
-                            announcementRepository.findById(3L).get(),
+                                                theatreRepository.findByName("Theatre 2"),
                             sessionDateRepository.findByDate(LocalDate.parse("2022-05-01")),
                             sessionTimeRepository.findByTime(LocalTime.of(10,0)),
-                            sessionTimeRepository.findByTime(LocalTime.of(12,0))
-                    )
+                            sessionTimeRepository.findByTime(LocalTime.of(12,0)),
+                            announcementRepository.findById(3L).get()
+                                        )
             ));
 
             movieSessionRepository.saveAll(movieSessions);

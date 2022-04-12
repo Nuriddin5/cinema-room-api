@@ -26,13 +26,13 @@
 //    Announcement announcement;
 //
 //    @ManyToOne
-//    SessionDate session_date;
+//    SessionDate sessionDate;
 //
 //    @ManyToOne
-//    SessionTime start_time;
+//    SessionTime startTime;
 //
 //    @ManyToOne
-//    SessionTime end_time;
+//    SessionTime endTime;
 //
 //
 //}

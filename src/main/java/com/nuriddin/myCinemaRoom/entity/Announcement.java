@@ -25,18 +25,26 @@ public class Announcement extends AbsLongEntity {
 
     @ManyToOne()
 //    @OnDelete(action = OnDeleteAction.CASCADE)
-    MovieContract movie_contract;
+    MovieContract  movieContract;
 
 
 
     Boolean isActive;
     @JsonIgnore
-    @OneToMany(mappedBy = "announcements",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "announcement",cascade = CascadeType.ALL)
     List<MovieSession> movieSessions;
 
-    public Announcement(MovieContract movie_contract, Boolean isActive) {
-        this.movie_contract = movie_contract;
+    public Announcement(MovieContract  movieContract, Boolean isActive) {
+        this. movieContract =  movieContract;
         this.isActive = isActive;
+    }
+
+    @Override
+    public String toString() {
+        return "Announcement{" +
+               " movieContract=" +  movieContract +
+               ", isActive=" + isActive +
+               '}';
     }
 }
 

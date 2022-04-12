@@ -3,18 +3,7 @@ package com.nuriddin.myCinemaRoom.service.ticket;
 
 // t.me/superJavaDeveloper 30.03.2022;
 
-//import lombok.*;
-//import lombok.experimental.FieldDefaults;
-//
-//import javax.persistence.Entity;
-//import java.util.UUID;
-//
-//@EqualsAndHashCode(callSuper = true)
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Data
-//@FieldDefaults(level = AccessLevel.PRIVATE)
-//@Entity
+ 
 
 import com.nuriddin.myCinemaRoom.dto.TicketDto;
 import com.nuriddin.myCinemaRoom.entity.MovieSession;
@@ -65,7 +54,7 @@ public class TicketServiceImpl implements TicketService {
         Ticket ticket = new Ticket(
                 movieSession,
                 seatRepository.findById(ticketDto.getSeatId()).get(),
-                movieSession.getAnnouncement().getMovie_contract().getMinPricePerSeat(),
+                movieSession.getAnnouncement().getMovieContract().getMinPricePerSeat(),
                 TicketStatus.NEW,
                 userRepository.findByUsername("nur")
         );

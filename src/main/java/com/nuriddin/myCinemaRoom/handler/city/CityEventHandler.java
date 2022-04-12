@@ -3,18 +3,7 @@ package com.nuriddin.myCinemaRoom.handler.city;
 
 // t.me/superJavaDeveloper 05.04.2022;
 
-//import lombok.*;
-//import lombok.experimental.FieldDefaults;
-//
-//import javax.persistence.Entity;
-//import java.util.UUID;
-//
-//@EqualsAndHashCode(callSuper = true)
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Data
-//@FieldDefaults(level = AccessLevel.PRIVATE)
-//@Entity
+ 
 
 import com.nuriddin.myCinemaRoom.entity.City;
 import com.nuriddin.myCinemaRoom.repository.CityRepository;

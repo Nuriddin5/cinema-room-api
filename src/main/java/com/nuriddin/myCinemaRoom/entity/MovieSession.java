@@ -4,18 +4,17 @@ package com.nuriddin.myCinemaRoom.entity;
 import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.Hibernate;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import java.util.Objects;
 
-@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
+@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class MovieSession extends AbsLongEntity {
@@ -23,28 +22,30 @@ public class MovieSession extends AbsLongEntity {
     @ManyToOne()
     Theatre theatre;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    Announcement announcement;
 
     @ManyToOne
-    SessionDate session_date;
+    SessionDate sessionDate;
 
     @ManyToOne
-    SessionTime start_time;
+    SessionTime startTime;
 
     @ManyToOne
-    SessionTime end_time;
+    SessionTime endTime;
 
-    @ManyToOne(optional = true)
-    private Announcement announcements;
+    @ManyToOne()
+    private Announcement announcement;
 
-    public MovieSession(Theatre theatre, Announcement announcement, SessionDate session_date, SessionTime start_time, SessionTime end_time) {
-        this.theatre = theatre;
-        this.announcement = announcement;
-        this.session_date = session_date;
-        this.start_time = start_time;
-        this.end_time = end_time;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        MovieSession that = (MovieSession) o;
+        return getId() != null && Objects.equals(getId(), that.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }
 
