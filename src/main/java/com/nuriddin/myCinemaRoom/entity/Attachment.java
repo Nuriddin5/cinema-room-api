@@ -6,6 +6,7 @@ package com.nuriddin.myCinemaRoom.entity;
 import com.nuriddin.myCinemaRoom.entity.template.AbsLongEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@EqualsAndHashCode(callSuper = true)
 @Entity
 public class
 Attachment extends AbsLongEntity {
