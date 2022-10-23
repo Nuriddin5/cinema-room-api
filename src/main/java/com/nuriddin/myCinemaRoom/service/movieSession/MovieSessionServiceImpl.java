@@ -30,7 +30,7 @@ public class MovieSessionServiceImpl implements MovieSessionService {
     public HttpEntity<?> getAllMovieSessions() {
         List<MovieSession> movieSessions = movieSessionRepository.findAll();
         if (movieSessions.isEmpty()) {
-            return ResponseEntity.ok().body("no movie sessions yet");
+            return ResponseEntity.ok().body("No movie sessions yet");
         }
         return ResponseEntity.ok().body(movieSessions);
     }
