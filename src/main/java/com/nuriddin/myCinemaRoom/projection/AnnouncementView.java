@@ -2,6 +2,7 @@ package com.nuriddin.myCinemaRoom.projection;
 
 // TODO: 30.03.2022  
 public interface AnnouncementView {
+
     Long getAnnouncementId();
 
     String getName();

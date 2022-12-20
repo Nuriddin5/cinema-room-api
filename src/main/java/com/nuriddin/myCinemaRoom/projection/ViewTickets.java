@@ -1,7 +1,5 @@
 package com.nuriddin.myCinemaRoom.projection;
 
-import com.nuriddin.myCinemaRoom.entity.Announcement;
-import com.nuriddin.myCinemaRoom.entity.Row;
 import com.nuriddin.myCinemaRoom.enums.TicketStatus;
 
 import java.util.UUID;

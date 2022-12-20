@@ -1,3 +1,5 @@
-package com.nuriddin.myCinemaRoom.projection;public interface CustomLocation {
+package com.nuriddin.myCinemaRoom.projection;
+
+public interface CustomLocation {
     Long getId();
 }
